@@ -2,3 +2,25 @@
 
              Laurent Bedubourg <lbedubourg@motion-twin.com>
 
+
+  Usage requirements
+  ==================
+
+  - PHP5
+
+
+  PHPTAL development requirements
+  ===============================
+
+  - PEAR
+  - Phing[1] to run maintainance tasks in an ant way
+  - PHPUnit2[2] to run tests
+  - PhpDocumentor[3] to generate PHP documentation
+
+  Phing tasks
+  ===========
+
+  - phing test
+  - phing pear-package
+  
+  
