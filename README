@@ -31,6 +31,14 @@
     mv PHPTAL* /path/to/your/php/include/path
   
 
+  Getting the latest development version
+  ======================================
+
+  You can checkout the latest subversion trunk content using :
+
+    svn co https://yota.dyndns.org/phptal/trunk phptal
+
+
   PHPTAL development requirements
   ===============================
 
@@ -50,20 +58,6 @@
   - phing doc      (call phpdocumentor on classes folder)
   - phing test     (run tests)
   - phing main     (test, build, pear-package, tar)
-
-
-  Getting the latest 'stable' package
-  ===================================
-
-  PEAR packages are available on http://phptal.sf.net.
-  
-
-  Getting the latest development version
-  ======================================
-
-  You can checkout the latest subversion trunk content using :
-
-    svn co https://yota.dyndns.org/phptal/trunk phptal
 
 
  [0] http://pear.php.net
