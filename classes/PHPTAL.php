@@ -252,13 +252,8 @@ class PHPTAL
      *
      * @return $this
      */
-    public function setSource($src, $path=false)
+    public function setSource($src, $path = null)
     {
-        if (!$path) {
-            // this prefix tells string source that path has been faked
-            $path = PHPTAL_StringSource::NO_PATH_PREFIX.md5($src).'>';
-        }
-
         $this->_prepared = false;
         $this->_functionName = null;
         $this->_codeFile = null;
