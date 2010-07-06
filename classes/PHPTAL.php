@@ -258,7 +258,7 @@ class PHPTAL
         $this->_functionName = null;
         $this->_codeFile = null;
         $this->_source = new PHPTAL_StringSource($src, $path);
-        $this->_path = $path;
+        $this->_path = $this->_source->getRealPath();
         $this->_context->_docType = null;
         $this->_context->_xmlDeclaration = null;
         return $this;
