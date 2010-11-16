@@ -482,7 +482,8 @@ function phptal_path($base, $path, $nothrow=false)
  */
 function phptal_isempty($var)
 {
-    return !$var || ($var instanceof Countable && count($var)===0);
+    return $var === null || $var === false || $var === ''
+           || ((is_array($var) || $var instanceof Countable) && count($var)===0);
 }
 
 /**
