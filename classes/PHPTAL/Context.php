@@ -474,7 +474,7 @@ function phptal_path($base, $path, $nothrow=false)
 }
 
 /**
- * helper function for conditional expressions
+ * helper function for chained expressions
  *
  * @param mixed $var value to check
  * @return bool
@@ -483,6 +483,18 @@ function phptal_path($base, $path, $nothrow=false)
 function phptal_isempty($var)
 {
     return !$var || ($var instanceof Countable && count($var)===0);
+}
+
+/**
+ * helper function for conditional expressions
+ *
+ * @param mixed $var value to check
+ * @return bool
+ * @access private
+ */
+function phptal_true($var)
+{
+    return $var && (!$var instanceof Countable || count($var));
 }
 
 /**
