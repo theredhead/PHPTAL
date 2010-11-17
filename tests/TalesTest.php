@@ -67,6 +67,13 @@ class TalesTest extends PHPTAL_TestCase
         $res = PHPTAL_Php_TalesInternal::compileToPHPExpressions($src);
         $this->assertEquals('!phptal_true($ctx->foo)', $res);
     }
+    
+    function testChainedExists()
+    {
+        $tpl = $this->newPHPTAL()->setSource('<div tal:condition="exists:a | nothing">ok</div>');
+        $tpl->a = array(1);
+        $this->assertEquals('<div>ok</div>',$tpl->execute());
+    }
 
     function testNotPath()
     {
