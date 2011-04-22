@@ -1236,15 +1236,15 @@ class PHPTAL
 
         $uses_autoload = function_exists('__autoload')
             && (!($tmp = spl_autoload_functions()) || ($tmp[0] === '__autoload'));
-        
-        // Prepending PHPTAL's autoloader helps if there are other autoloaders 
+
+        // Prepending PHPTAL's autoloader helps if there are other autoloaders
         // that throw/die when file is not found. Only >5.3 though.
         if (version_compare(PHP_VERSION, '5.3', '>=')) {
             spl_autoload_register(array(__CLASS__,'autoload'), false, true);
         } else {
-            spl_autoload_register(array(__CLASS__,'autoload'));            
+            spl_autoload_register(array(__CLASS__,'autoload'));
         }
-        
+
         if ($uses_autoload) {
             spl_autoload_register('__autoload');
         }
